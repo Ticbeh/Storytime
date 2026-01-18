@@ -1,0 +1,120 @@
+
+a {
+    cursor: url('../images/80837DB5-8058-4598-A2AB-A58465DE8E00.png') 0 0, pointer;
+    }
+h1 {
+    color: red;
+}
+body {
+    background: black;
+}
+p {
+    color: white;
+}   
+
+.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  max-height: 400px;
+}
+.image-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%;
+}
+.left-image, .right-image, .center-image {
+  max-width: 300px;
+  height: 320px;
+}
+.image-container1 {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center; 
+  width: 100%;
+}
+.left-image1, .right-image1 {
+  width: 75px;
+  height: auto;
+}
+
+.animated-image {
+    animation: shake 0.9s; /* Animation name and duration */
+    animation-iteration-count: infinite; /* Repeat the animation infinitely */
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  /* ... more steps ... */
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+    /* Your animation steps */
+
+
+.animated-image:hover {
+  /* Define the end state on hover */
+  transform: rotate(360deg) scale(1.1); /* Rotates 360 degrees and scales up by 10% */
+
+}
+.news-banner {
+    /* Container styling */
+    background-color: #06050544;
+    color: rgb(225, 197, 40);
+    padding: 10px 0;
+    overflow: hidden; /* Hides the text outside the banner area */
+    white-space: nowrap; /* Keeps all text on a single line */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.marquee-content {
+    /* Animation applied here */
+    display: inline-block;
+    padding-left: 100%; /* Start the text off-screen to the right */
+    animation: marquee 30s linear infinite; /* Animation name, duration, timing, and repetition */
+}
+
+/* Keyframe animation definition */
+@keyframes marquee {
+    0% {
+        transform: translateX(0); /* Start position */
+    }
+    100% {
+        transform: translateX(-100%); /* End position: moves the width of the content */
+    }
+}
+
+/* Pause the animation on hover for better user experience */
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+ .p {
+    font-size: 18px;{
+    font-family: monospace; /* Typewriter feel */
+  }
+
+  .typewriter-container {
+    display: inline-block; /* Prevents the cursor from spanning the whole page width */
+    overflow: hidden; /* Hides text until typed */
+    border-right: .15em solid orange; /* The blinking cursor */
+    white-space: nowrap; /* Keeps text on a single line */
+    /* The animation duration and steps must match the number of characters for a natural speed */
+    animation: 
+      typing 3.5s steps(30, end) forwards, /* Typing animation */
+      blink-cursor .75s step-end infinite; /* Blinking cursor animation */
+    width: 0; /* Starts with zero width */
+  }
+
+  /* Keyframes for the typing effect: expands width from 0 to 100% */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  /* Keyframes for the blinking cursor: toggles opacity */
+  @keyframes blink-cursor {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
